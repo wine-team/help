@@ -8,6 +8,7 @@ class Web_notice extends MJ_Controller {
         $this->load->library('pagination');
         $this->load->model('web_notice_model', 'web_notice');
         $this->load->model('help_center_model', 'help_center');
+        $this->load->model('help_category_model','help_category');
         $this->load->model('cms_block_model', 'cms_block');
     }
     
@@ -28,13 +29,9 @@ class Web_notice extends MJ_Controller {
         $data['res_list'] = $this->web_notice->web_notice_list($pg-1, $perpage, $getData)->result();  
         $data['all_rows']  = $config['total_rows'];
         $data['pg_now']    = $pg;
-        $data['help'] = $this->help_center->findById(array('title !='=>''))->result();
-        $block = $this->cms_block->getWherein('block_id',array('foot_recommend_img','foot_speed_key'));
-        foreach ($block->result() as $b)
-        {
-            $data[$b->block_id] = $b->description;
-        }
-        $this->load->view('web_notice/notice_list', $data);
+        $data['category'] = $this->help_category->getReult();
+        $data['cms_block'] = $this->cms_block->findByBlockIds(array('foot_recommend_img','foot_speed_key'));
+        $this->load->view('web_notice/list', $data);
     }
 	
 	/**
@@ -47,18 +44,14 @@ class Web_notice extends MJ_Controller {
 	    {
 	        $prev_one = $this->web_notice->findById(array('id <'=>$id), 'id DESC', 1);
 	        $next_one = $this->web_notice->findById(array('id >'=>$id), 'id ASC', 1);
-	        $data['help'] = $this->web_notice->findById(array('title !='=>''))->result();
+	        $data['category'] = $this->help_category->getReult();
 	        $data['prev_one'] = $prev_one->num_rows()>0 ? $prev_one->row() : '';
 	        $data['next_one'] = $next_one->num_rows()>0 ? $next_one->row() : '';
 	        $data['res'] = $help_detail->row();
-    	    $block = $this->cms_block->getWherein('block_id',array('foot_recommend_img','foot_speed_key'));
-            foreach ($block->result() as $b)
-            {
-                $data[$b->block_id] = $b->description;
-            }
-	        $this->load->view('web_notice/notice_detail', $data);
+    	    $data['cms_block'] = $this->cms_block->findByBlockIds(array('foot_recommend_img','foot_speed_key'));
+	        $this->load->view('web_notice/detail', $data);
 	    }else{
-	        $this->redirect('Web_notice/notice_list');
+	        $this->redirect('Web_notice/list');
 	    }
 	}
 	

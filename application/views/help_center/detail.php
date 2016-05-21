@@ -1,6 +1,6 @@
 ﻿<?php $this->load->view('layout/header');?>
 <div id="content" class="w">
-<div class="s_tl">当前位置：<a href="<?php echo $this->config->main_base_url;?>">首页</a><code class="lr3">></code><a href="article_cat-12.html">站内公告</a><code class="lr3">></code>妙网商城用户协议</div>
+<div class="s_tl">当前位置：<a href="<?php echo $this->config->main_base_url;?>">首页</a><code class="lr3">></code><a href="<?php echo $this->config->help_url.'/Help_center/help_list';?>">帮助中心</a><code class="lr3">></code><?php echo $helpResult->sub_title;?></div>
 <div class="ubg">
 	<div class="u_l left">
 	    <?php foreach ($category->result() as $item):?>
