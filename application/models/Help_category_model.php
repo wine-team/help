@@ -7,8 +7,10 @@ class Help_category_model extends CI_Model{
 	 * 
 	 * @param unknown $param
 	 */
-	public function getReult(){
+	public function getResultByFlag($flag){
 		
+		$this->db->where('flag',$flag);
+		$this->db->order_by('sort','desc');
 		return $this->db->get($this->table);
 	}
 }
