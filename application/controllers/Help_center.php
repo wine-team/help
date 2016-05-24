@@ -27,7 +27,7 @@ class Help_center extends MJ_Controller {
     	$data['help_center'] = $this->help_center->pg_list($page_num,$num,$getData);
     	$data['all_rows'] = $config['total_rows'];
     	$data['cms_block'] = $this->cms_block->findByBlockIds(array('foot_recommend_img','foot_speed_key'));
-    	$data['category'] = $this->help_category->getResultByFlag($flag=1);//左边栏显示 
+    	 $data['category'] = $this->help_category->getResultByFlag($flag=1);//左边栏显示 
         $this->load->view('help_center/list', $data);
 
     }
