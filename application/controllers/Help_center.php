@@ -12,7 +12,6 @@ class Help_center extends MJ_Controller {
 
     public function help_list($pg = 1)
     {
-
     	$page_num = 20;
     	$num = ($pg-1)*$page_num;
     	$getData = $this->input->get();
@@ -20,16 +19,15 @@ class Help_center extends MJ_Controller {
     	$config['suffix']      = $this->pageGetParam($getData);
     	$config['base_url']    = base_url('Help_center/help_list');
     	$config['total_rows']  = $this->help_center->total($getData);
-    	$config['per_page'] = $page_num;
+    	$config['per_page']    = $page_num;
     	$config['uri_segment'] = 3;
     	$this->pagination->initialize($config);
     	$data['pg_link'] = $this->pagination->create_links();
     	$data['help_center'] = $this->help_center->pg_list($page_num,$num,$getData);
     	$data['all_rows'] = $config['total_rows'];
     	$data['cms_block'] = $this->cms_block->findByBlockIds(array('foot_recommend_img','foot_speed_key'));
-    	 $data['category'] = $this->help_category->getResultByFlag($flag=1);//左边栏显示 
+    	$data['category'] = $this->help_category->getResultByFlag($flag=1);//左边栏显示 
         $this->load->view('help_center/list', $data);
-
     }
 
 	public function detail($id)
