@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-class User_feedback extends MJ_Controller {
+class User_feedback extends MW_Controller {
 	public function _init()
 	{
 		$this->load->library('pagination');

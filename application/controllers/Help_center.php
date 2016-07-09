@@ -1,6 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-class Help_center extends MJ_Controller {
+
+class Help_center extends MW_Controller {
 
     public function _init()
     {
@@ -8,12 +9,17 @@ class Help_center extends MJ_Controller {
         $this->load->model('cms_block_model', 'cms_block');
         $this->load->model('help_center_model', 'help_center');
         $this->load->model('help_category_model','help_category');
+        $this->load->model('mall_cart_goods_model','mall_cart_goods');
     }
-
-    public function help_list($pg = 1)
-    {
+    
+     /**
+     * 帮助中心
+     * @param number $pg
+     */
+    public function help_list(){
+    	
     	$page_num = 20;
-    	$num = ($pg-1)*$page_num;
+    	$num = 0;
     	$getData = $this->input->get();
     	$config['first_url']   = base_url('Help_center/help_list').$this->pageGetParam($getData);
     	$config['suffix']      = $this->pageGetParam($getData);
@@ -23,11 +29,13 @@ class Help_center extends MJ_Controller {
     	$config['uri_segment'] = 3;
     	$this->pagination->initialize($config);
     	$data['pg_link'] = $this->pagination->create_links();
+    	//var_dump($data['pg_link']);exit;
     	$data['help_center'] = $this->help_center->pg_list($page_num,$num,$getData);
     	$data['all_rows'] = $config['total_rows'];
-    	$data['cms_block'] = $this->cms_block->findByBlockIds(array('foot_recommend_img','foot_speed_key'));
     	$data['category'] = $this->help_category->getResultByFlag($flag=1);//左边栏显示 
-        $this->load->view('help_center/list', $data);
+        $data['cms_block'] = $this->cms_block->findByBlockIds(array('home_keyword','foot_recommend_img','foot_speed_key'));
+        $data['cart_num'] = ($this->uid) ? $this->mall_cart_goods->getCartGoodsByUid($this->uid)->num_rows() : 0;
+    	$this->load->view('help_center/list', $data);
     }
 
 	public function detail($id)
@@ -39,7 +47,9 @@ class Help_center extends MJ_Controller {
 	    $data['category'] = $this->help_category->getResultByFlag($flag=1);
 	    $data['helpResult'] = $result->row(0);
 	    $data['help_id'] = $id;
-	    $data['cms_block'] = $this->cms_block->findByBlockIds(array('foot_recommend_img','foot_speed_key'));
+	    $data['cms_block'] = $this->cms_block->findByBlockIds(array('home_keyword','foot_recommend_img','foot_speed_key'));
+        $data['cart_num'] = ($this->uid) ? $this->mall_cart_goods->getCartGoodsByUid($this->uid)->num_rows() : 0;
 	    $this->load->view('help_center/detail', $data);
 	}
+
 }
