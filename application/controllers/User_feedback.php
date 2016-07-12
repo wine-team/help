@@ -7,6 +7,7 @@ class User_feedback extends MW_Controller {
 		$this->load->model('user_feedback_model','user_feedback');
 		$this->load->model('help_center_model', 'help_center');
 		$this->load->model('cms_block_model', 'cms_block');
+		$this->load->model('mall_cart_goods_model','mall_cart_goods');
 	}
 
 	/**
@@ -24,7 +25,8 @@ class User_feedback extends MW_Controller {
 		} else {
 			$data['backurl'] = $this->config->main_base_url;
 		}
-		$data['cms_block'] = $this->cms_block->findByBlockIds(array('foot_recommend_img','foot_speed_key'));
+		$data['cms_block'] = $this->cms_block->findByBlockIds(array('home_keyword','foot_recommend_img','foot_speed_key'));
+		$data['cart_num'] = ($this->uid) ? $this->mall_cart_goods->getCartGoodsByUid($this->uid)->num_rows() : 0;
 		$data['captcha'] = $this->getCaptcha(22, 100, 36, 4);
 		$this->load->view('user_feedback/user_feedback' ,$data);
 	}

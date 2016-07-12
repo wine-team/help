@@ -16,10 +16,9 @@ class Help_center extends MW_Controller {
      * 帮助中心
      * @param number $pg
      */
-    public function help_list(){
+    public function help_list($num=0){
     	
     	$page_num = 20;
-    	$num = 0;
     	$getData = $this->input->get();
     	$config['first_url']   = base_url('Help_center/help_list').$this->pageGetParam($getData);
     	$config['suffix']      = $this->pageGetParam($getData);
@@ -29,13 +28,13 @@ class Help_center extends MW_Controller {
     	$config['uri_segment'] = 3;
     	$this->pagination->initialize($config);
     	$data['pg_link'] = $this->pagination->create_links();
-    	//var_dump($data['pg_link']);exit;
     	$data['help_center'] = $this->help_center->pg_list($page_num,$num,$getData);
     	$data['all_rows'] = $config['total_rows'];
     	$data['category'] = $this->help_category->getResultByFlag($flag=1);//左边栏显示 
         $data['cms_block'] = $this->cms_block->findByBlockIds(array('home_keyword','foot_recommend_img','foot_speed_key'));
         $data['cart_num'] = ($this->uid) ? $this->mall_cart_goods->getCartGoodsByUid($this->uid)->num_rows() : 0;
-    	$this->load->view('help_center/list', $data);
+        $data['pg'] = ($num/$page_num) + 1;
+        $this->load->view('help_center/list', $data);
     }
 
 	public function detail($id)
