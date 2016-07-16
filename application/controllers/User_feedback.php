@@ -64,8 +64,7 @@ class User_feedback extends MW_Controller {
 		$data['ms_tel'] = $postData['ms_tel'];
 		$data['ms_type'] = 1;
 		$res = $this->user_feedback->insert($data);
-		if ($res)
-		{
+		if ($res) {
 			$backUrl = empty($postData['back_url']) ? $this->config->main_base_url : $postData['back_url'];
 			$this->jsonMessage('',$backUrl);
 		}else{
