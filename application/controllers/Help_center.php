@@ -34,6 +34,7 @@ class Help_center extends MW_Controller {
         $data['cms_block'] = $this->cms_block->findByBlockIds(array('home_keyword','foot_recommend_img','foot_speed_key'));
         $data['cart_num'] = ($this->uid) ? $this->mall_cart_goods->getCartGoodsByUid($this->uid)->num_rows() : 0;
         $data['pg'] = ($num/$page_num) + 1;
+        $data['head_menu'] = 'on';
         $this->load->view('help_center/list', $data);
     }
 
@@ -48,6 +49,7 @@ class Help_center extends MW_Controller {
 	    $data['help_id'] = $id;
 	    $data['cms_block'] = $this->cms_block->findByBlockIds(array('home_keyword','foot_recommend_img','foot_speed_key'));
         $data['cart_num'] = ($this->uid) ? $this->mall_cart_goods->getCartGoodsByUid($this->uid)->num_rows() : 0;
+        $data['head_menu'] = 'on';
 	    $this->load->view('help_center/detail', $data);
 	}
 

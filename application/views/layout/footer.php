@@ -1,7 +1,82 @@
+<div id="minbar" class="minbar">
+	<div class="r_panel">
+		<ul class="m_mid" id="m_mid">
+			<li class="m_li" id="minarg">
+				<a href="<?php echo site_url('cart/grid');?>">
+					<i class="f iconfont">&#xe603;</i>
+					<i id="carr_num"><?php echo isset($cart_num) ? $cart_num : '0';?></i>
+				</a>
+				<p class="rt_line"></p>
+				<div class="r_av m_tr" id="racar">
+					<em class="r_vt">◆</em>
+					<div id="rxcar"></div>
+				</div>
+			</li>
+			<!--  
+			<li class="m_li m_lih" id="minar">
+				<a href="javascript:;">
+					<img src="http://s.qw.cc/themes/v4/css/ft/rkf.gif" width="28" height="29">
+					<em class="mr_wd">美女客服</em>
+				</a>
+				<p class="rt_line"></p>
+			</li>
+			-->
+			<li class="m_li">
+				<a href="<?php echo $this->config->ucenter_url;?>" target="blank" class="f">
+					<i class="iconfont">&#xe600;</i>
+				</a>
+				<p class="r_av m_tr">订单查询<em class="r_vt">◆</em></p>
+			</li>
+			<li class="m_li">
+				<a href="<?php echo $this->config->ucenter_url.'enshrine/index';?>" class="f">
+					<i class="iconfont">&#xe606;</i>
+				</a>
+				<p class="r_av m_tr">我的收藏<em class="r_vt">◆</em></p>
+			</li>
+			<li class="m_li" id="rhist">
+				<a href="javascript:;" class="f">
+					<i class="iconfont">&#xe602;</i>
+				</a>
+				<div class="r_av m_tr" id="ghis">
+					<em class="r_vt">◆</em>
+					<h4>我的足迹</h4>
+					<div id="hibx"></div>
+				</div>
+			</li>
+		</ul>
+		<ul class="m_mid" id="m_fid">
+			<li class="m_li">
+				<a href="<?php echo $this->config->help_url.'user_feedback/index';?>" class="f" target="_blank">
+					<i class="iconfont">&#xe601;</i>
+				</a>
+				<p class="r_av m_tr">意见反馈
+					<em class="r_vt">◆</em>
+				</p>
+			</li>
+			<li class="m_li">
+				<a href="javascript:;" class="f">
+					<i class="iconfont">&#xe607;</i>
+				</a>
+				<p class="r_av m_tr" id="m_fma">
+					<img src="http://s.qw.cc/themes/v4/css/2/qapp02.png" width="120" height="135">
+					<em class="r_vt">◆</em>
+				</p>
+			</li>
+			<li class="m_li m_tops">
+				<a href="javascript:;" class="f top">
+					<i class="iconfont">&#xe604;</i>
+				</a>
+				<p class="r_av m_tr">返回顶部
+					<em class="r_vt">◆</em>
+				</p>
+			</li>
+		</ul>
+	</div>
+</div>
 <div id="footer">
 	<div class="ft_t">
 		<p class="w over">
-			<img src="passport/images/fbz.png" width="1190" height="48">
+			<img src="miaow/images/service.png">
 		</p>
 	</div>
 	<div class="w">
@@ -42,7 +117,7 @@
 		</dl>
 		<dl class="f_dl mr0">
 			<dt>APP下载</dt>
-			<dd><img src="" width="100" height="100" /></dd>
+			<dd><img src="" width="100" height="100"></dd>
 		</dl>
 		<div class="clear"></div>
 	</div>
@@ -60,7 +135,7 @@
 				订购热线 <span>400-660-0606</span>
 			</p>
 			<p>Copyright © 2015 ICP经营性许可证:浙ICP备8888888号-2</p>
-			<p>公司：妙网商城,电话：888-888-8888</p>
+			<p>公司：杭州小医仙网络科技有限公司,电话：888-888-8888</p>
 			<p class="mt10">
 				<a href="https://itunes.apple.com/us/app/qu-wang-qing-qu-shang-cheng/id934737326?mt=8" target="_blank" title="趣网商城iPhone,ipad版" rel="nofollow" class="ml5 mr5">
 					<img src="passport/images/sf2.png" width="110" height="30">
