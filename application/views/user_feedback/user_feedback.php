@@ -5,19 +5,19 @@
 				<div class="bl_red fB">意见反馈</div>
 				<p class="bline"></p>
 				<p class="lh30">&nbsp;</p>
-				<form id="feedback_form" method="post" action="">
+				<form id="feedback_form" method="post" action="<?php echo site_url('User_feedback/feedback_post');?>">
 					<table width="100%" border="0" class="td_p f14">
 						<tr>
 							<td valign="top" width="90">您的意见</td>
-							<td><textarea class="mb10 required" wrap="virtual" name="ms_content" id="msg" style="border: 1px solid #e5e5e5;line-height: 28px;height: 100px;width: 400px;" maxlength=1000 placeholder="请在这里留下您的意见，10-1000字"></textarea></td>
+							<td><textarea required="required" wrap="virtual" name="ms_content" id="msg" style="border: 1px solid #e5e5e5;line-height: 28px;height: 100px;width: 400px;" maxlength=1000 placeholder="请在这里留下您的意见，10-1000字"></textarea></td>
 						</tr>
 						<tr>
 							<td valign="top" width="90">手机号码</td>
-							<td><input type="text" name="ms_tel" id="mobile" value="" style="padding-left: 0;" placeholder="手机号" maxlength="15" class="ipt" /></td>
+							<td><input type="text" name="ms_tel" required="required" id="mobile" value="" style="padding-left: 0;" placeholder="手机号" maxlength="11" class="ipt" /></td>
 						</tr>
 						<tr>
 							<td>验证码</td>
-							<td><input name="captcha" id="captcha" type="text" maxlength="4" size="5" class="ipt required" style="width: 60px;margin-top: 3px;" onclick="this.value='';" /><span class="captcha"><?php echo $captcha['image'];?>看不清点我</span></td>
+							<td><input name="captcha" id="captcha" type="text" maxlength="4" size="5" class="ipt" style="width: 60px;margin-top: 3px;" /><span class="captcha"><?php echo $captcha['image'];?>看不清点我</span></td>
 						</tr>
 						<tr>
 							<td>&nbsp;</td>
