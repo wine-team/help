@@ -15,21 +15,11 @@ class User_feedback extends MW_Controller {
 	 * */
 	public function index()
 	{
-		if (isset($_SERVER['HTTP_REFERER'])) {
-			$parseUrl = parse_url($_SERVER['HTTP_REFERER']);
-			if (isset($parseUrl['query']) && strpos($parseUrl['query'], 'backurl') !== false) {
-				$data['backurl'] = urldecode(strstr($parseUrl['query'], 'http'));
-			} else {
-				$data['backurl'] = $_SERVER['HTTP_REFERER'];
-			}
-		} else {
-			$data['backurl'] = $this->config->main_base_url;
-		}
 		$data['cms_block'] = $this->cms_block->findByBlockIds(array('home_keyword','foot_recommend_img','foot_speed_key'));
 		$data['cart_num'] = ($this->uid) ? $this->mall_cart_goods->getCartGoodsByUid($this->uid)->num_rows() : 0;
 		$data['captcha'] = $this->getCaptcha(22, 100, 36, 4);
 		$data['head_menu'] = 'on';
-		$this->load->view('user_feedback/user_feedback' ,$data);
+		$this->load->view('user_feedback/index' ,$data);
 	}
 
 	/**
