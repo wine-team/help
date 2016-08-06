@@ -16,6 +16,7 @@
 <?php css('help', 'style', '20160415');?>
 
 <?php js('help', 'jquery-1.10.2');?>
+<?php js('help', 'layer/layer')?>
 <?php js('help', 'jquery.validate.min');?>
 <?php js('help', 'jquery.validate.messages_zh');?>
 <?php js('help', 'index');?>
