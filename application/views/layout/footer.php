@@ -51,24 +51,28 @@
 			<p>
 				<a target="_blank" href="<?php echo $this->config->main_base_url;?>" class="c9">首页</a>
 				<span class="vline">|</span>
-				<a target="_blank" rel="nofollow" href="<?php echo $this->config->help_url;?>" class="c9">正品,隐私保障</a>
+				<a target="_blank" rel="nofollow" href="<?php echo $this->config->help_url;?>" class="c9">关于我们</a>
 				<span class="vline">|</span>
-				<a target="_blank" href="<?php echo $this->config->help_url;?>" rel="nofollow" class="c9">公司简介</a>
+				<a target="_blank" href="<?php echo $this->config->help_url;?>" rel="nofollow" class="c9">联系我们</a>
 				<span class="vline">|</span>
-				<a rel="nofollow" target="_blank" href="<?php echo $this->config->help_url;?>" class="c9">帮助中心</a>
+				<a target="_blank" href="<?php echo $this->config->help_url;?>" rel="nofollow" class="c9">联系客服</a>
 				<span class="vline">|</span>
-				订购热线 <span>400-660-0606</span>
+				<a rel="nofollow" target="_blank" href="<?php echo $this->config->help_url;?>" class="c9">商家入驻</a>
+				<span class="vline">|</span>
+				订购热线 <span>888-8888-8888</span>
 			</p>
 			<p>Copyright © 2015 ICP经营性许可证:浙ICP备8888888号-2</p>
 			<p>公司：杭州小医仙网络科技有限公司,电话：888-888-8888</p>
+			<!--  
 			<p class="mt10">
-				<a href="https://itunes.apple.com/us/app/qu-wang-qing-qu-shang-cheng/id934737326?mt=8" target="_blank" title="趣网商城iPhone,ipad版" rel="nofollow" class="ml5 mr5">
+				<a href="javascript:;" target="_blank" title="妙处网iPhone,ipad版" rel="nofollow" class="ml5 mr5">
 					<img src="passport/images/sf2.png" width="110" height="30">
 				</a>
-				<a href="http://www.qw.cc/app/mobile.apk" target="_blank" title="趣网商城Android版" rel="nofollow">
+				<a href="javascript:;" target="_blank" title="妙处网Android版" rel="nofollow">
 					<img src="passport/images/sf3.png" width="110" height="30">
 				</a>
 			</p>
+			-->
 		</div>
 	</div>
 </div>
