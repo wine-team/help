@@ -20,3 +20,16 @@
          <?php endforeach;?>
     </ul>
 </div>
+<script type="text/javascript">
+    $(function(){
+        $('.help-dl>dd').each(function(){
+            if($(this).hasClass('active')){
+                $(this).parents('.help-gwzn').show();
+            }
+        });
+        $('.help-click').delegate('li','click',function(event){
+            $(this).find('.help-gwzn').toggle();
+            event.stopPropagation();
+        });
+    });
+</script>
