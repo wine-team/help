@@ -11,7 +11,7 @@
                 <?php if($helpList->num_rows()>0):?>
                 	<?php foreach ($helpList->result() as $val):?>
 	                <dd <?php if($val->id==$id):?>class="active"<?php endif;?>>
-	                    <a href="<?php echo site_url('Help_center/index/'.$val->id);?>" title="<?php echo $val->sub_title;?>">◎ <?php echo $val->sub_title;?></a>
+	                    <a href="<?php echo site_url('help_center/index/'.$val->id);?>" title="<?php echo $val->sub_title;?>">◎ <?php echo $val->sub_title;?></a>
 	                </dd>
 	                <?php endforeach;?>
 	             <?php endif;?>
