@@ -146,15 +146,15 @@
             </ul>
         </div>
         <ul class="navs left">
-            <li><a href="<?php echo site_url();?>" rel="nofollow">首页</a></li>
-            <li><a href="<?php echo site_url('goods/femal');?>">女性用品</a></li>
-            <li><a href="<?php echo site_url('goods/femal');?>">男性用品</a></li>
-            <li><a href="<?php echo site_url('goods/femal');?>">延时助情</a></li>
-            <li><a href="<?php echo site_url('goods/femal');?>">情趣内衣</a></li>
-            <li><a href="<?php echo site_url('goods/femal');?>">飞机杯</a></li>
-            <li><a href="<?php echo site_url('goods/femal');?>">G点棒</a></li>
-            <li><a href="<?php echo site_url('goods/femal');?>">仿真阳具</a></li>
-            <li><a href="<?php echo site_url('goods/femal');?>">土豪天堂</a></li>
+            <li><a href="<?php echo $this->config->main_base_url;?>" rel="nofollow">首页</a></li>
+            <li><a href="<?php echo $this->config->main_base_url.'goods/femal';?>">女性用品</a></li>
+            <li><a href="<?php echo $this->config->main_base_url.'goods/femal';?>">男性用品</a></li>
+            <li><a href="<?php echo $this->config->main_base_url.'goods/femal';?>">延时助情</a></li>
+            <li><a href="<?php echo $this->config->main_base_url.'goods/femal';?>">情趣内衣</a></li>
+            <li><a href="<?php echo $this->config->main_base_url.'goods/femal';?>">飞机杯</a></li>
+            <li><a href="<?php echo $this->config->main_base_url.'goods/femal';?>">G点棒</a></li>
+            <li><a href="<?php echo $this->config->main_base_url.'goods/femal';?>">仿真阳具</a></li>
+            <li><a href="<?php echo $this->config->main_base_url.'goods/femal';?>">土豪天堂</a></li>
         </ul>
         <div class="clear"></div>
     </div>
