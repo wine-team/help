@@ -61,7 +61,7 @@
 				<span class="vline">|</span>
 				<a target="_blank" href="<?php echo $this->config->help_url.'help_center/index/27.html';?>" rel="nofollow" class="c9">联系我们</a>
 				<span class="vline">|</span>
-				<a target="_blank" href="javascript:;" rel="nofollow" class="c9">联系客服</a>
+				<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2665892628&site=qq&menu=yes" rel="nofollow" class="c9">联系客服</a>
 				<span class="vline">|</span>
 				<a rel="nofollow" target="_blank" href="<?php echo $this->config->help_url.'help_center/index/27.html';?>" class="c9">商家入驻</a>
 				<span class="vline">|</span>

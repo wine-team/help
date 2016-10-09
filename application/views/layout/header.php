@@ -7,7 +7,7 @@
 <meta name="renderer" content="webkit">
 <meta name="title"  content="<?php echo isset($headTittle) ? $headTittle : '妙处网,成人用品玩具-男根增大延迟性保健品-夫妻情趣用品-(全国货到付款 保密配送)';?>" />
 <meta name="keywords" content="<?php echo isset($headTittle) ? $headTittle : '妙处网.成人用品,情趣用品,成人用具,性用品,性保健品,性生活用品,性爱用品,成人保健,夫妻保健品';?>" />
-<meta name="description"  content="<?php echo isset($headTittle)?$headTittle : '妙处网,成人用品商城专业销售各类成人玩具、性保健品、情趣用品、情趣内衣、避孕套、成人玩具等高档情趣性用品,订购热线888-8888-888!';?>" />
+<meta name="description"  content="<?php echo isset($headTittle)?$headTittle : '妙处网,成人用品商城专业销售各类成人玩具、性保健品、情趣用品、情趣内衣、避孕套、成人玩具等高档情趣性用品';?>" />
 <title><?php echo isset($headTittle) ? $headTittle : '妙处网,性用品,性保健品,正品成人用品网站';?></title> 
 <base href="<?php echo $this->config->skins_url;?>"/>
 <link type="image/x-icon" rel="shortcut icon" href="miaow/images/logo.png"/>
@@ -67,14 +67,15 @@
             <li class="nbt">
                 <a href="<?php echo $this->config->help_url;?>" rel="nofollow">客户服务<em class="rdop"></em></a>
                 <div class="tuln">
-                	<a href="<?php echo $this->config->help_url;?>" rel="nofollow" target="_blank">如何订购</a>
-                	<a href="<?php echo $this->config->help_url;?>" rel="nofollow" target="_blank">在线支付</a>
-                	<a href="<?php echo $this->config->help_url;?>" rel="nofollow" target="_blank">物流查询</a>
+                	<a href="<?php echo $this->config->help_url.'help_center/index/9.html';?>" rel="nofollow" target="_blank">如何订购</a>
+                	<a href="<?php echo $this->config->help_url.'help_center/index/23.html';?>" rel="nofollow" target="_blank">在线支付</a>
+                	<a href="<?php echo $this->config->help_url.'help_center/index/28.html';?>" rel="nofollow" target="_blank">常见问题</a>
+                	<a href="<?php echo $this->config->help_url.'help_center/index/25.html';?>" rel="nofollow" target="_blank">分销指南</a>
                 </div>
             </li>
-            <li><a href="<?php echo $this->config->help_url;?>" rel="nofollow" class="pr5" target="_blank">商家服务</a></li>
+            <li><a href="<?php echo $this->config->help_url.'help_center/index/27.html';?>" rel="nofollow" class="pr5" target="_blank">商家服务</a></li>
             <li>
-            	<a rel="nofollow" href="javascript:;" class="contact-kf">
+            	<a rel="nofollow" href="http://wpa.qq.com/msgrd?v=3&uin=2644720895&site=qq&menu=yes" class="contact-kf" target="_blank">
             		<em class="f f14 iconfont mr5">&#xe605;</em>联系客服
             	</a>
             </li>
@@ -146,15 +147,15 @@
             </ul>
         </div>
         <ul class="navs left">
-            <li><a href="<?php echo $this->config->main_base_url;?>" rel="nofollow">首页</a></li>
-            <li><a href="<?php echo $this->config->main_base_url.'goods/femal';?>">女性用品</a></li>
-            <li><a href="<?php echo $this->config->main_base_url.'goods/femal';?>">男性用品</a></li>
-            <li><a href="<?php echo $this->config->main_base_url.'goods/femal';?>">延时助情</a></li>
-            <li><a href="<?php echo $this->config->main_base_url.'goods/femal';?>">情趣内衣</a></li>
-            <li><a href="<?php echo $this->config->main_base_url.'goods/femal';?>">飞机杯</a></li>
-            <li><a href="<?php echo $this->config->main_base_url.'goods/femal';?>">G点棒</a></li>
-            <li><a href="<?php echo $this->config->main_base_url.'goods/femal';?>">仿真阳具</a></li>
-            <li><a href="<?php echo $this->config->main_base_url.'goods/femal';?>">土豪天堂</a></li>
+            <li><a href="<?php echo site_url();?>" rel="nofollow">首页</a></li>
+            <li><a href="<?php echo site_url('goods/femal');?>">避孕套</a></li>
+            <li><a href="<?php echo site_url('goods/femal');?>">情趣内衣</a></li>
+            <li><a href="<?php echo site_url('goods/femal');?>">男性玩具</a></li>
+            <li><a href="<?php echo site_url('goods/femal');?>">女性玩具</a></li>
+            <li><a href="<?php echo site_url('goods/femal');?>">延时助情</a></li>
+            <li><a href="<?php echo site_url('goods/femal');?>">双人情趣</a></li>
+            <li><a href="<?php echo site_url('goods/femal');?>">润滑液</a></li>
+            <li><a href="<?php echo site_url('goods/femal');?>">丰胸缩阴</a></li>
         </ul>
         <div class="clear"></div>
     </div>
