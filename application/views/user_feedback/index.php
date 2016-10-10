@@ -35,9 +35,6 @@
 	<div class="tpk over">
 	    <?php echo $cms_block['foot_recommend_img'];?>
 	</div>
-	<p class="alC">
-		<a href="<?php echo $this->config->main_base_url;?>" class="hbtn c9 mt15" rel="nofollow">查看更多活动</a>
-	</p>
 	<div class="fa_l clearfix mt35">
 		<?php echo $cms_block['foot_speed_key'];?>
 	</div>
