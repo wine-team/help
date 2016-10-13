@@ -1,14 +1,14 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-cn">
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="renderer" content="webkit">
-<meta name="title"  content="<?php echo isset($headTittle) ? $headTittle : '妙处网,成人用品玩具-男根增大延迟性保健品-夫妻情趣用品-(全国货到付款 保密配送)';?>" />
-<meta name="keywords" content="<?php echo isset($headTittle) ? $headTittle : '妙处网.成人用品,情趣用品,成人用具,性用品,性保健品,性生活用品,性爱用品,成人保健,夫妻保健品';?>" />
-<meta name="description"  content="<?php echo isset($headTittle)?$headTittle : '妙处网,成人用品商城专业销售各类成人玩具、性保健品、情趣用品、情趣内衣、避孕套、成人玩具等高档情趣性用品';?>" />
-<title><?php echo isset($headTittle) ? $headTittle : '妙处网,性用品,性保健品,正品成人用品网站';?></title> 
+<meta name="title"  content="<?php echo isset($headTittle) ? $headTittle : '妙处网,妙处,妙,成人用品玩具-男根增大延迟性保健品-夫妻情趣用品-(全国货到付款 保密配送)';?>" />
+<meta name="keywords" content="<?php echo isset($headTittle) ? $headTittle : '妙处网,妙处,妙,成人用品,情趣用品,成人用具,性用品,性保健品,性生活用品,性爱用品,成人保健,夫妻保健品';?>" />
+<meta name="description"  content="<?php echo isset($headTittle)?$headTittle : '妙处网,妙处,妙,成人用品商城专业销售各类成人玩具、性保健品、情趣用品、情趣内衣、避孕套、成人玩具等高档情趣性用品';?>" />
+<title><?php echo isset($headTittle) ? $headTittle : '妙处网,妙处,妙,性用品,性保健品,正品成人用品网站';?></title> 
 <base href="<?php echo $this->config->skins_url;?>"/>
 <link type="image/x-icon" rel="shortcut icon" href="miaow/images/logo.png"/>
 <?php css('common', 'common', '20160415');?>
@@ -44,10 +44,10 @@
                 	我的妙处网<em class="rdop"></em>
                 </a>
                 <div class="tuln">
-                	<a rel="nofollow" href="<?php echo $this->config->ucenter_url.'ucenter/user_info';?>" target="_blank">个人信息</a>
-                	<a rel="nofollow" href="<?php echo $this->config->ucenter_url.'enshrine';?>" target="_blank">我的收藏</a>
-                	<a rel="nofollow" href="<?php echo $this->config->ucenter_url.'user_coupon';?>" target="_blank">我的优惠券</a>
-                	<a rel="nofollow" href="<?php echo $this->config->ucenter_url.'address';?>" target="_blank">收货地址</a>
+                	<a rel="nofollow" href="<?php echo $this->config->ucenter_url.'ucenter/user_info.html';?>" target="_blank">个人信息</a>
+                	<a rel="nofollow" href="<?php echo $this->config->ucenter_url.'enshrine.html';?>" target="_blank">我的收藏</a>
+                	<a rel="nofollow" href="<?php echo $this->config->ucenter_url.'user_coupon.html';?>" target="_blank">我的优惠券</a>
+                	<a rel="nofollow" href="<?php echo $this->config->ucenter_url.'address.html';?>" target="_blank">收货地址</a>
                 </div>
             </li>
             <li>
@@ -55,6 +55,8 @@
             		<em class="f f14 mr5 iconfont red">&#xe60c;</em>我的订单
             	</a>
             </li>
+            
+            <!-- 
             <li class="nbt">
                 <a href="javascript:;" rel="nofollow">
                 	<em class="f mt1 iconfont">&#xe608;</em>手机版
@@ -64,6 +66,7 @@
                 	<img src="help/images/tm31.png" width="188" height="124"/>
                 </div>
             </li>
+             -->
             <li class="nbt">
                 <a href="<?php echo $this->config->help_url;?>" rel="nofollow">客户服务<em class="rdop"></em></a>
                 <div class="tuln">
