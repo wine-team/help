@@ -3,7 +3,7 @@ class MW_Controller extends CI_Controller
 {
     protected $frontUser = false;
     public $uid;
-    public $userName;
+    public $aliasName;
    
     public function __construct()
     {
@@ -12,7 +12,7 @@ class MW_Controller extends CI_Controller
          if($frontUser){
         	$this->frontUser = unserialize( base64_decode($frontUser) );
             $this->uid = $this->frontUser['uid'];
-            $this->userName = $this->frontUser['userName'];
+            $this->aliasName = $this->frontUser['aliasName'];
          }
          $this->_init(); //用着重载
         
