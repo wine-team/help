@@ -26,7 +26,12 @@
 								<span>文章来源：<?php echo $v['author']?></span>
 							</p>
 							<p class="details">
-							<?php echo isset($v['image']) ? '<img src="'. $v['image']. '" />' : ''?>
+							<?php if(!empty($v['image'])):?>
+								<img src="<?php echo $this->config->show_image_url('infor',strstr($v['image'],'|',true));?>" />
+							<?php else:?>
+								<?php echo isset($v['contentImage']) ? '<img src="'. $v['contentImage']. '" />' : ''?>
+							<?php endif;?>
+							
 							<?php echo $v['_content']?>
 							</p>
 						</a></li>

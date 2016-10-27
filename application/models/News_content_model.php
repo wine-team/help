@@ -13,7 +13,7 @@ class News_content_model extends CI_Model
         }
         $this->w['status'] = 1; //上线
         $list['all_rows'] = $this->db->where($this->w)->count_all_results($this->table);
-        $list['list'] = $this->db->select(array('id', 'title', 'content', 'pv', 'author', 'create_time'))
+        $list['list'] = $this->db->select(array('id', 'title', 'content', 'pv', 'author', 'create_time','image'))
                 ->where($this->w)
                 ->limit($data['size'], ($data['p'] - 1) * $data['size'])
                 ->order_by('id', 'DESC')
@@ -25,7 +25,7 @@ class News_content_model extends CI_Model
                 $v['_content'] = mb_strlen(trim(strip_tags($v['content'])) < 50) ? trim(strip_tags($v['content'])) :mb_substr(trim(strip_tags($v['content'])), 0, 140, 'utf-8').'...';
                 $is_match = preg_match('/<img.*?src="(.*?)"/', $v['content'], $match);
                 if ($is_match && isset($match[1]) && $match[1]) {
-                    $v['image'] = $match[1];
+                    $v['contentImage'] = $match[1];
                 }
             }
         }
