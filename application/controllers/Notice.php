@@ -58,7 +58,7 @@ class Notice extends MW_Controller
 	    $res['class'] = $news_class;
 	    $res['class_name'] = isset($news_class[$res['detail']['class_id']]) ? $news_class[$res['detail']['class_id']] : '贝竹公告';
 	    $this->news_content->update_pv($id);
-	    $res['headTitle'] = isset($res['detail']['title']) ? $res['detail']['title'] :'贝竹资讯';
+	    $res['headTittle'] = isset($res['detail']['title']) ? $res['detail']['title'] :'贝竹资讯';
 	    $res['head_menu'] = 'on';
 	    $this->load->view('consult/notice/detail', $res);
 	}
