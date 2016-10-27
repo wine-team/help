@@ -4,7 +4,7 @@
  * cyl
  */
 
-class Notice extends CS_Controller
+class Notice extends MW_Controller
 {
     protected $size = 10;
 
@@ -30,7 +30,7 @@ class Notice extends CS_Controller
         );
         $res = $this->news_content->get_data($data);
         $news_class = $this->news_class->get_class_name();
-        $config['base_url'] = base_url('consult/notice/index/' . $class_id . '?');
+        $config['base_url'] = base_url('notice/index/' . $class_id . '?');
         $config['num_links'] = 2;
         $config['query_string_segment'] = 'p';
         $config['page_query_string'] = TRUE;
@@ -43,6 +43,7 @@ class Notice extends CS_Controller
         $res['pg_now'] = $p;
         $res['pg_num'] = $this->size;
         $res['class_id'] = $class_id;
+        $res['head_menu'] = 'on';
         $this->load->view('consult/notice/index', $res);
     }
 	
@@ -58,6 +59,7 @@ class Notice extends CS_Controller
 	    $res['class_name'] = isset($news_class[$res['detail']['class_id']]) ? $news_class[$res['detail']['class_id']] : '贝竹公告';
 	    $this->news_content->update_pv($id);
 	    $res['headTitle'] = isset($res['detail']['title']) ? $res['detail']['title'] :'贝竹资讯';
+	    $res['head_menu'] = 'on';
 	    $this->load->view('consult/notice/detail', $res);
 	}
 	
