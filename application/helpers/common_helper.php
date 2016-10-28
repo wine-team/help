@@ -101,7 +101,12 @@ function getAllCategory(){
 
 	$CI = & get_instance();
 	$CI->load->model('mall_category_model','mall_category');
-	$allCategory = $CI->mall_category->getAllCategory();
+	if (!$CI->cache->memcached->get('categoryCache')) {
+	    $allCategory = $CI->mall_category->getAllCategory();
+	    $CI->cache->memcached->save('categoryCache',$allCategory);
+	} else {
+	    $allCategory = $CI->cache->memcached->get('categoryCache');
+	}
 	return $allCategory;
 }
 
