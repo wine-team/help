@@ -15,7 +15,7 @@ class News_content_model extends CI_Model
         $list['all_rows'] = $this->db->where($this->w)->count_all_results($this->table);
         $list['list'] = $this->db->select(array('id', 'title', 'content', 'pv', 'author', 'create_time','image'))
                 ->where($this->w)
-                ->limit($data['size'], ($data['p'] - 1) * $data['size'])
+                ->limit($data['size'], $data['p'])
                 ->order_by('id', 'DESC')
                 ->get($this->table)
                 ->result_array();

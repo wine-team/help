@@ -19,14 +19,15 @@ class Notice extends MW_Controller
     //资讯列表
     public function index($class_id=1)
     {
-        $p = $this->input->get('p');
+        $p = $this->input->get('p'); //每页行数
         if (!$p || !is_numeric($p) || !is_int($p * 1)) {
-            $p = 1;
+            $p = 0;
         }
         $data = array(
             'class_id' => $class_id,
-            'p' => $p,
             'size' => $this->size,
+        	'p'  => $p,
+        	'pg' => ($p/$this->size)+1
         );
         $res = $this->news_content->get_data($data);
         $news_class = $this->news_class->get_class_name();
@@ -40,7 +41,7 @@ class Notice extends MW_Controller
         $res['pg_link'] =   $this->pagination->create_links();
         $res['class'] = $news_class;
         $res['class_name'] = isset($news_class[$class_id]) ? $news_class[$class_id] : '贝竹公告';
-        $res['pg_now'] = $p;
+        $res['pg_now'] = $data['pg'];
         $res['pg_num'] = $this->size;
         $res['class_id'] = $class_id;
         $res['head_menu'] = 'on';
