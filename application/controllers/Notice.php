@@ -17,7 +17,7 @@ class Notice extends MW_Controller
     }
     
     //资讯列表
-    public function index($class_id=1)
+    public function index($class_id=2)
     {
         $p = $this->input->get('p'); //每页行数
         if (!$p || !is_numeric($p) || !is_int($p * 1)) {
