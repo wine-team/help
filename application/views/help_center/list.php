@@ -12,9 +12,11 @@
 	        </div>
 		</div>
 	</div>
+	<!-- 
 	<div class="clear"></div>
 	<div class="fa_l clearfix mt35">
-		<?php echo $cms_block['foot_speed_key'];?>
+		<?php //echo $cms_block['foot_speed_key'];?>
 	</div>
+	 -->
 </div>
 <?php $this->load->view('layout/footer');?>
